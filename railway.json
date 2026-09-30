@@ -1,0 +1,5 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "builder": "NIXPACKS",
+  "startCommand": "npx prisma migrate deploy --schema api/prisma/schema.prisma && npm run start --workspace api"
+}
