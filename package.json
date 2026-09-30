@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Blog API + public reader + authoring admin, monorepo",
+  "workspaces": [
+    "api",
+    "ui-kit",
+    "blog-client",
+    "admin-client"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace api",
+    "dev:blog": "npm run dev --workspace blog-client",
+    "dev:admin": "npm run dev --workspace admin-client",
+    "build": "npm run build --workspace blog-client && npm run build --workspace admin-client",
+    "smoke": "npm run smoke --workspace api"
+  }
+}

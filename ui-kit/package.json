@@ -1,0 +1,15 @@
+{
+  "name": "ui-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./theme.css",
+    "./theme.css": "./theme.css",
+    "./api": "./api.js"
+  },
+  "files": [
+    "theme.css",
+    "api.js"
+  ]
+}
