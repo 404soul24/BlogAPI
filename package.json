@@ -14,6 +14,7 @@
     "dev:blog": "npm run dev --workspace blog-client",
     "dev:admin": "npm run dev --workspace admin-client",
     "build": "npm run build --workspace blog-client && npm run build --workspace admin-client",
+    "start": "npx prisma migrate deploy --schema api/prisma/schema.prisma && npm run start --workspace api",
     "smoke": "npm run smoke --workspace api"
   }
 }
