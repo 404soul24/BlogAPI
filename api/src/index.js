@@ -12,6 +12,7 @@ export const app = express();
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 
+app.get(['/', '/api'], (_req, res) => res.redirect('/api/health'));
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
 
 app.use('/api/users', usersRouter);
