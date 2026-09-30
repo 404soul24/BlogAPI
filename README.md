@@ -118,8 +118,8 @@ cleans up the accounts it creates.
 
 - **API** — any Node host (Render, Railway, Fly). Set `DATABASE_URL` and
   `JWT_SECRET`, run `npx prisma migrate deploy`, start with `npm start`. On
-  Railway, `railway.json` at the repo root already runs the migration on every
-  start.
+  Railway, the root `npm start` runs the migration before the API, so it works
+  as-is from a GitHub deploy.
 - **Front-ends** — static builds (`npm run build` at the repo root) on Netlify,
   Vercel, or Pages. Set `VITE_API_URL` to the deployed API and redeploy — it is
   baked in at build time. The apps use hash routing, so no SPA rewrite rule is

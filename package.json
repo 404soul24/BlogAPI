@@ -10,6 +10,7 @@
     "admin-client"
   ],
   "scripts": {
+    "postinstall": "prisma generate --schema api/prisma/schema.prisma",
     "dev:api": "npm run dev --workspace api",
     "dev:blog": "npm run dev --workspace blog-client",
     "dev:admin": "npm run dev --workspace admin-client",
